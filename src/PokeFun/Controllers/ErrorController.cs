@@ -16,11 +16,18 @@ namespace PokeFun.Controllers
         [Route("/error-local-development")]
         public IActionResult ErrorLocalDevelopment()
         {
-            var context = HttpContext.Features.Get<IExceptionHandlerFeature>();
+            if (HttpContext != null)
+            {
+                var context = HttpContext.Features.Get<IExceptionHandlerFeature>();
 
-            return Problem(
-                detail: context.Error.StackTrace,
-                title: context.Error.Message);
+                return Problem(
+                    detail: context?.Error.StackTrace,
+                    title: context?.Error.Message);
+            }
+            else
+            {
+                return Problem();
+            }
         }
 
         [Route("/error")]
