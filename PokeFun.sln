@@ -8,15 +8,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1FF56569-50ED-4D06-9243-A67F0DFA0D20}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeFun.Tests", "tests\PokeFun.Tests\PokeFun.Tests.csproj", "{7D7FF4C8-3509-45A1-8729-A52A63C77906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeFun.Tests", "tests\PokeFun.Tests\PokeFun.Tests.csproj", "{7D7FF4C8-3509-45A1-8729-A52A63C77906}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{84460FAF-EE86-41E7-AA3B-E798C3CF75A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D62C3D5B-19BE-47E9-975E-FC14AFC8B4DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeFun.FunTranslations", "src\PokeFun.FunTranslations\PokeFun.FunTranslations.csproj", "{F6E29C29-C583-49C7-BBBA-BB8FD512B059}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeFun.FunTranslations", "src\PokeFun.FunTranslations\PokeFun.FunTranslations.csproj", "{F6E29C29-C583-49C7-BBBA-BB8FD512B059}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeFun.FunTranslations.Tests", "tests\PokeFun.FunTranslations.Tests\PokeFun.FunTranslations.Tests.csproj", "{BB7B8C74-7ACA-46A8-920B-EBC126B16D27}"
 EndProject
