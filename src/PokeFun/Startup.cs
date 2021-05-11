@@ -60,8 +60,6 @@ namespace PokeFun
                 app.UseExceptionHandler("/error");
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();
