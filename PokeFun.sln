@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeFun.PokeApi", "src\Poke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeFun.PokeApi.Tests", "tests\PokeFun.PokeApi.Tests\PokeFun.PokeApi.Tests.csproj", "{ED26FEA2-54C1-4610-A764-A9A9DD0F30AE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokeFun.IntegrationTests", "tests\PokeFun.IntegrationTests\PokeFun.IntegrationTests.csproj", "{8428C9F5-CA96-48BB-B6F1-B288EA482B28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,18 @@ Global
 		{ED26FEA2-54C1-4610-A764-A9A9DD0F30AE}.Release|x64.Build.0 = Release|Any CPU
 		{ED26FEA2-54C1-4610-A764-A9A9DD0F30AE}.Release|x86.ActiveCfg = Release|Any CPU
 		{ED26FEA2-54C1-4610-A764-A9A9DD0F30AE}.Release|x86.Build.0 = Release|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Debug|x64.Build.0 = Debug|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Debug|x86.Build.0 = Debug|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Release|x64.ActiveCfg = Release|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Release|x64.Build.0 = Release|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Release|x86.ActiveCfg = Release|Any CPU
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +132,7 @@ Global
 		{BB7B8C74-7ACA-46A8-920B-EBC126B16D27} = {D62C3D5B-19BE-47E9-975E-FC14AFC8B4DF}
 		{AAAD9F47-1598-4DBE-AD79-2F20A582B819} = {84460FAF-EE86-41E7-AA3B-E798C3CF75A6}
 		{ED26FEA2-54C1-4610-A764-A9A9DD0F30AE} = {D62C3D5B-19BE-47E9-975E-FC14AFC8B4DF}
+		{8428C9F5-CA96-48BB-B6F1-B288EA482B28} = {D62C3D5B-19BE-47E9-975E-FC14AFC8B4DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {37F4A324-AD1A-409D-BD4F-AD9DBD31933B}
