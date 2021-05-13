@@ -54,7 +54,7 @@ namespace PokeFun.Controllers
                 var englishFlavorText = species.FlavorTextEntries.Where(t => t.Language.Name.Equals("en", StringComparison.OrdinalIgnoreCase));
                 var bestEnglishFlavorText = englishFlavorText.FirstOrDefault(t => t.Version.Name == "x") ?? englishFlavorText.First();
 
-                var cleanedFlavorText = Regex.Replace(bestEnglishFlavorText.Text, @"\\[rn]", " ");
+                var cleanedFlavorText = Regex.Replace(bestEnglishFlavorText.Text, @"[\r\n]", " ");
 
                 response = new Pokemon
                 {
