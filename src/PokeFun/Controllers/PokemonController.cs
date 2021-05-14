@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PokeFun.Extensions;
 using PokeFun.Model;
 using PokeFun.PokeApi;
 
@@ -45,11 +46,9 @@ namespace PokeFun.Controllers
                 var pokemon = await _pokeApiService.GetPokemon(pokemonName);
                 var species = await _pokeApiService.GetPokemonSpecies(pokemon.Species.Name);
 
-                // suppose there is always at least one English flavor text, prefer the "x" version
-                var englishFlavorText = species.FlavorTextEntries.Where(t => t.Language.Name.Equals("en", StringComparison.OrdinalIgnoreCase));
-                var bestEnglishFlavorText = englishFlavorText.FirstOrDefault(t => t.Version.Name == "x") ?? englishFlavorText.First();
-
-                var cleanedFlavorText = Regex.Replace(bestEnglishFlavorText.Text, @"[\r\n]", " ");
+                // suppose there is always at least one English flavor text
+                var flavorText = species.GetFlavorTextByLanguageAndPreferredVersion("en", "x");
+                var cleanedFlavorText = flavorText.GetTextWithoutNewLineChars();
 
                 return new Pokemon
                 {
