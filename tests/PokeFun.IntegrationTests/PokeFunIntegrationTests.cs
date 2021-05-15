@@ -81,7 +81,7 @@ namespace PokeFun.IntegrationTests
             deserializedResponse.Should().BeEquivalentTo(new Pokemon
             {
                 Name = "mewtwo",
-                Description = "Created by a scientist after years of horrific gene-splicing and dna-engineering experiments,  it was.",
+                Description = "Created by a scientist after years of horrific gene-splicing and dna-engineering experiments, it was.",
                 Habitat = "rare",
                 IsLegendary = true
             });
@@ -111,7 +111,7 @@ namespace PokeFun.IntegrationTests
             deserializedResponse.Should().BeEquivalentTo(new Pokemon
             {
                 Name = "diglett",
-                Description = "On plant roots,  lives about one yard underground where it feeds.Aboveground,  it sometimes appears.",
+                Description = "On plant roots, lives about one yard underground where it feeds. Aboveground, it sometimes appears.",
                 Habitat = "cave",
                 IsLegendary = false
             });
