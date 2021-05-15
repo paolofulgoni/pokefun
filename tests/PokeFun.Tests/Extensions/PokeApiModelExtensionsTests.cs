@@ -1,12 +1,7 @@
 using FluentAssertions;
 using NUnit.Framework;
-using PokeFun.Extensions;
 using PokeFun.PokeApi.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PokeFun.Extensions.Tests
 {
