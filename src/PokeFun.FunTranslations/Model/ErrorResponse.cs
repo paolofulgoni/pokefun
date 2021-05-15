@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PokeFun.FunTranslations.Model
 {
-    public class ErrorResponse
+    public record ErrorResponse
     {
         [JsonPropertyName("error")]
-        public Error Error { get; set; }
+        public Error Error { get; init; }
     }
 }

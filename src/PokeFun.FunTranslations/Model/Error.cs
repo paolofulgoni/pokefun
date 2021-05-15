@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace PokeFun.FunTranslations.Model
 {
-    public class Error
+    public record Error
     {
         [JsonPropertyName("code")]
-        public int Code { get; set; }
+        public int Code { get; init; }
 
         [JsonPropertyName("message")]
-        public string Message { get; set; }
+        public string Message { get; init; }
     }
 }

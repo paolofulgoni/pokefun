@@ -33,7 +33,7 @@ namespace PokeFun.Extensions.Tests
 
             // Assert
 
-            flavorText.Should().BeEquivalentTo(flavorTextL1V2);
+            flavorText.Should().Be(flavorTextL1V2);
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace PokeFun.Extensions.Tests
 
             // Assert
 
-            flavorText.Should().BeEquivalentTo(flavorTextL2V2);
+            flavorText.Should().Be(flavorTextL2V2);
         }
 
         [Test]

@@ -89,7 +89,7 @@ namespace PokeFun.Tests.Controllers
             // Assert
 
             result.Value.Should().NotBeNull();
-            result.Value.Should().BeEquivalentTo(new Pokemon
+            result.Value.Should().Be(new Pokemon
             {
                 Name = "poke",
                 Description = "desc yoda x",
@@ -166,7 +166,7 @@ namespace PokeFun.Tests.Controllers
             // Assert
 
             result.Value.Should().NotBeNull();
-            result.Value.Should().BeEquivalentTo(new Pokemon
+            result.Value.Should().Be(new Pokemon
             {
                 Name = "poke",
                 Description = "desc yoda x",
@@ -243,7 +243,7 @@ namespace PokeFun.Tests.Controllers
             // Assert
 
             result.Value.Should().NotBeNull();
-            result.Value.Should().BeEquivalentTo(new Pokemon
+            result.Value.Should().Be(new Pokemon
             {
                 Name = "poke",
                 Description = "desc shakespeare x",

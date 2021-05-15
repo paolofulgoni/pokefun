@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PokeFun.FunTranslations.Model
 {
-    public class Success
+    public record Success
     {
         [JsonPropertyName("total")]
-        public int Total { get; set; }
+        public int Total { get; init; }
     }
 }

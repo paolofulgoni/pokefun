@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PokeFun.PokeApi.Model
 {
-    public class NamedAPIResource
+    public record NamedAPIResource
     {
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string Name { get; init; }
     }
 }

@@ -51,7 +51,7 @@ namespace PokeFun.PokeApi.Tests
             // Assert
 
             result.Should().NotBeNull();
-            result.Should().BeEquivalentTo(new Pokemon
+            result.Should().Be(new Pokemon
             {
                 Id = 413,
                 Name = "wormadam-plant",
@@ -61,6 +61,7 @@ namespace PokeFun.PokeApi.Tests
                 }
             });
         }
+
         [Test]
         public async Task GetPokemonSpecies_ReturnsValidData_WhenThirdPartyServiceResponseIsOk()
         {
@@ -94,7 +95,7 @@ namespace PokeFun.PokeApi.Tests
             // Assert
 
             result.Should().NotBeNull();
-            result.Should().BeEquivalentTo(new PokemonSpecies
+            result.Should().Be(new PokemonSpecies
             {
                 Id = 132,
                 Name = "ditto",

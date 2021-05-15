@@ -75,12 +75,12 @@ namespace PokeFun.Controllers
                 if (response.Habitat == "cave" || response.IsLegendary)
                 {
                     var translation = await _funTranslationsService.TranslateEnglishToYoda(response.Description);
-                    response.Description = translation.Contents.Translated;
+                    response = response with { Description = translation.Contents.Translated };
                 }
                 else
                 {
                     var translation = await _funTranslationsService.TranslateEnglishToShakespeare(response.Description);
-                    response.Description = translation.Contents.Translated;
+                    response = response with { Description = translation.Contents.Translated };
                 }
             }
             catch (Exception ex)

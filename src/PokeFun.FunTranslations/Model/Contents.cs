@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace PokeFun.FunTranslations.Model
 {
-    public class Contents
+    public record Contents
     {
         [JsonPropertyName("translated")]
-        public string Translated { get; set; }
+        public string Translated { get; init; }
 
         [JsonPropertyName("text")]
-        public string Text { get; set; }
+        public string Text { get; init; }
 
         [JsonPropertyName("translation")]
-        public string Translation { get; set; }
+        public string Translation { get; init; }
     }
 }

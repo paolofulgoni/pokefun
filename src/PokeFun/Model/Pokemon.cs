@@ -10,13 +10,13 @@ namespace PokeFun.Model
     /// <summary>
     /// Pokemon information
     /// </summary>
-    public class Pokemon
+    public record Pokemon
     {
         /// <summary>
         /// Name of the Pokemon
         /// </summary>
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string Name { get; init; }
 
         /// <summary>
         /// Description of the Pokemon.
@@ -25,18 +25,18 @@ namespace PokeFun.Model
         /// It may be in plain English or translated depending on the request
         /// </remarks>
         [JsonPropertyName("description")]
-        public string Description { get; set; }
+        public string Description { get; init; }
 
         /// <summary>
         /// The habitat this Pokemon can be encountered in
         /// </summary>
         [JsonPropertyName("habitat")]
-        public string Habitat { get; set; }
+        public string Habitat { get; init; }
 
         /// <summary>
         /// Whether or not this is a legendary Pokemon
         /// </summary>
         [JsonPropertyName("isLegendary")]
-        public bool IsLegendary { get; set; }
+        public bool IsLegendary { get; init; }
     }
 }

@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace PokeFun.PokeApi.Model
 {
-    public class Pokemon
+    public record Pokemon
     {
         [JsonPropertyName("id")]
-        public int Id { get; set; }
+        public int Id { get; init; }
 
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string Name { get; init; }
 
         [JsonPropertyName("species")]
-        public NamedAPIResource Species { get; set; }
+        public NamedAPIResource Species { get; init; }
     }
 }

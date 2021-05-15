@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace PokeFun.PokeApi.Model
 {
-    public class FlavorText
+    public record FlavorText
     {
         [JsonPropertyName("flavor_text")]
-        public string Text { get; set; }
+        public string Text { get; init; }
 
         [JsonPropertyName("language")]
-        public NamedAPIResource Language { get; set; }
+        public NamedAPIResource Language { get; init; }
 
         [JsonPropertyName("version")]
-        public NamedAPIResource Version { get; set; }
+        public NamedAPIResource Version { get; init; }
     }
 }

@@ -35,7 +35,7 @@ namespace PokeFun.IntegrationTests
             using var responseContent = await response.Content.ReadAsStreamAsync();
             var deserializedResponse = await JsonSerializer.DeserializeAsync<Pokemon>(responseContent);
 
-            deserializedResponse.Should().BeEquivalentTo(new Pokemon
+            deserializedResponse.Should().Be(new Pokemon
             {
                 Name = "mewtwo",
                 Description = "It was created by a scientist after years of horrific gene-splicing and DNA-engineering experiments.",
@@ -82,7 +82,7 @@ namespace PokeFun.IntegrationTests
             using var responseContent = await response.Content.ReadAsStreamAsync();
             var deserializedResponse = await JsonSerializer.DeserializeAsync<Pokemon>(responseContent);
 
-            deserializedResponse.Should().BeEquivalentTo(new Pokemon
+            deserializedResponse.Should().Be(new Pokemon
             {
                 Name = "mewtwo",
                 Description = "Created by a scientist after years of horrific gene-splicing and dna-engineering experiments,  it was.",
@@ -112,7 +112,7 @@ namespace PokeFun.IntegrationTests
             using var responseContent = await response.Content.ReadAsStreamAsync();
             var deserializedResponse = await JsonSerializer.DeserializeAsync<Pokemon>(responseContent);
 
-            deserializedResponse.Should().BeEquivalentTo(new Pokemon
+            deserializedResponse.Should().Be(new Pokemon
             {
                 Name = "diglett",
                 Description = "On plant roots,  lives about one yard underground where it feeds.Aboveground,  it sometimes appears.",
@@ -141,7 +141,7 @@ namespace PokeFun.IntegrationTests
             using var responseContent = await response.Content.ReadAsStreamAsync();
             var deserializedResponse = await JsonSerializer.DeserializeAsync<Pokemon>(responseContent);
 
-            deserializedResponse.Should().BeEquivalentTo(new Pokemon
+            deserializedResponse.Should().Be(new Pokemon
             {
                 Name = "ditto",
                 Description = "'t hath the ability to reconstitute its entire cellular structure to transform into thither's few or none will entertain it 't sees.",
