@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Options;
 using PokeFun.FunTranslations.Model;
 using System;
 using System.Collections.Generic;
@@ -33,11 +34,15 @@ namespace PokeFun.FunTranslations
 
     public class FunTranslationsService : IFunTranslationsService
     {
+        private readonly FunTranslationsServiceOptions _options;
+
         public HttpClient Client { get; }
 
-        public FunTranslationsService(HttpClient client)
+        public FunTranslationsService(HttpClient client, IOptions<FunTranslationsServiceOptions> options)
         {
-            client.BaseAddress = new Uri("https://api.funtranslations.com");
+            _options = options.Value;
+
+            client.BaseAddress = new Uri(options.Value.BaseAddress);
             client.DefaultRequestHeaders.Add("Accept", "application/json");
 
             Client = client;
@@ -47,14 +52,14 @@ namespace PokeFun.FunTranslations
         {
             if (text == null) throw new ArgumentNullException(nameof(text));
 
-            return await Translate("translate/shakespeare.json", text);
+            return await Translate(_options.ShakespeareEndpoint, text);
         }
 
         public async Task<Translation> TranslateEnglishToYoda(string text)
         {
             if (text == null) throw new ArgumentNullException(nameof(text));
 
-            return await Translate("translate/yoda.json", text);
+            return await Translate(_options.YodaEndpoint, text);
         }
 
         private async Task<Translation> Translate(string requestUri, string text)

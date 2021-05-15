@@ -30,6 +30,9 @@ namespace PokeFun
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<PokeApiServiceOptions>(Configuration.GetSection(PokeApiServiceOptions.OptionsName));
+            services.Configure<FunTranslationsServiceOptions>(Configuration.GetSection(FunTranslationsServiceOptions.OptionsName));
+
             services.AddHttpClient<IPokeApiService, PokeApiService>();
             services.AddHttpClient<IFunTranslationsService, FunTranslationsService>();
 

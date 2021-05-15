@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Microsoft.Extensions.Options;
 using Moq;
 using Moq.Protected;
 using NUnit.Framework;
@@ -36,7 +37,10 @@ namespace PokeFun.FunTranslations.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new FunTranslationsService(clientMock);
+            var optionsMock = new Mock<IOptions<FunTranslationsServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new FunTranslationsServiceOptions());
+
+            var service = new FunTranslationsService(clientMock, optionsMock.Object);
 
             // Act
 
@@ -71,7 +75,10 @@ namespace PokeFun.FunTranslations.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new FunTranslationsService(clientMock);
+            var optionsMock = new Mock<IOptions<FunTranslationsServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new FunTranslationsServiceOptions());
+
+            var service = new FunTranslationsService(clientMock, optionsMock.Object);
 
             // Act
 
@@ -106,7 +113,10 @@ namespace PokeFun.FunTranslations.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new FunTranslationsService(clientMock);
+            var optionsMock = new Mock<IOptions<FunTranslationsServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new FunTranslationsServiceOptions());
+
+            var service = new FunTranslationsService(clientMock, optionsMock.Object);
 
             // Act
 
@@ -137,7 +147,10 @@ namespace PokeFun.FunTranslations.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new FunTranslationsService(clientMock);
+            var optionsMock = new Mock<IOptions<FunTranslationsServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new FunTranslationsServiceOptions());
+
+            var service = new FunTranslationsService(clientMock, optionsMock.Object);
 
             // Act
 

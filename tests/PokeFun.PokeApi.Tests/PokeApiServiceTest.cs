@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Microsoft.Extensions.Options;
 using Moq;
 using Moq.Protected;
 using NUnit.Framework;
@@ -38,7 +39,10 @@ namespace PokeFun.PokeApi.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new PokeApiService(clientMock);
+            var optionsMock = new Mock<IOptions<PokeApiServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new PokeApiServiceOptions());
+
+            var service = new PokeApiService(clientMock, optionsMock.Object);
 
             // Act
 
@@ -78,7 +82,10 @@ namespace PokeFun.PokeApi.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new PokeApiService(clientMock);
+            var optionsMock = new Mock<IOptions<PokeApiServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new PokeApiServiceOptions());
+
+            var service = new PokeApiService(clientMock, optionsMock.Object);
 
             // Act
 
@@ -132,7 +139,10 @@ namespace PokeFun.PokeApi.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new PokeApiService(clientMock);
+            var optionsMock = new Mock<IOptions<PokeApiServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new PokeApiServiceOptions());
+
+            var service = new PokeApiService(clientMock, optionsMock.Object);
 
             // Act
 
@@ -161,7 +171,10 @@ namespace PokeFun.PokeApi.Tests
 
             var clientMock = new HttpClient(handlerMock.Object);
 
-            var service = new PokeApiService(clientMock);
+            var optionsMock = new Mock<IOptions<PokeApiServiceOptions>>();
+            optionsMock.SetupGet(o => o.Value).Returns(new PokeApiServiceOptions());
+
+            var service = new PokeApiService(clientMock, optionsMock.Object);
 
             // Act
 

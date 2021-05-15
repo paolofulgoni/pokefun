@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Options;
 using PokeFun.PokeApi.Model;
 using System;
 using System.Collections.Generic;
@@ -31,11 +32,15 @@ namespace PokeFun.PokeApi
 
     public class PokeApiService : IPokeApiService
     {
+        private readonly PokeApiServiceOptions _options;
+
         public HttpClient Client { get; }
 
-        public PokeApiService(HttpClient client)
+        public PokeApiService(HttpClient client, IOptions<PokeApiServiceOptions> options)
         {
-            client.BaseAddress = new Uri("https://pokeapi.co");
+            _options = options.Value;
+
+            client.BaseAddress = new Uri(options.Value.BaseAddress);
             client.DefaultRequestHeaders.Add("Accept", "application/json");
 
             Client = client;
@@ -45,14 +50,14 @@ namespace PokeFun.PokeApi
         {
             if (pokemonName == null) throw new ArgumentNullException(nameof(pokemonName));
 
-            return await GetAndDeserialize<Pokemon>($"api/v2/pokemon/{pokemonName}");
+            return await GetAndDeserialize<Pokemon>($"{_options.PokemonEndpoint}/{pokemonName}");
         }
 
         public async Task<PokemonSpecies> GetPokemonSpecies(string pokemonSpeciesName)
         {
             if (pokemonSpeciesName == null) throw new ArgumentNullException(nameof(pokemonSpeciesName));
 
-            return await GetAndDeserialize<PokemonSpecies>($"api/v2/pokemon-species/{pokemonSpeciesName}");
+            return await GetAndDeserialize<PokemonSpecies>($"{_options.PokemonSpeciesEndpoint}/{pokemonSpeciesName}");
         }
 
         private async Task<T> GetAndDeserialize<T>(string requestUri)
