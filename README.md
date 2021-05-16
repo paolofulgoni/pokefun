@@ -6,6 +6,7 @@ _A Pokemon Web API, just for fun_
 
 [![build](https://github.com/paolofulgoni/pokefun/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/paolofulgoni/pokefun/actions/workflows/build.yml?query=branch%3Amain)
 [![docker](https://github.com/paolofulgoni/pokefun/actions/workflows/docker.yml/badge.svg)](https://github.com/paolofulgoni/pokefun/actions/workflows/docker.yml)
+[![codecov](https://codecov.io/gh/paolofulgoni/pokefun/branch/main/graph/badge.svg?token=AWD9PXV1EX)](https://codecov.io/gh/paolofulgoni/pokefun)
 
 This REST API provides two endpoints to get information about Pokemons:
 

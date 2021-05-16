@@ -22,4 +22,6 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --logger GitHubActions --filter TestCategory!=Integration
+      run: dotnet test --no-build --logger GitHubActions --filter TestCategory!=Integration --collect:"XPlat Code Coverage"
+    - name: Codecov
+      uses: codecov/codecov-action@v1.5.0
