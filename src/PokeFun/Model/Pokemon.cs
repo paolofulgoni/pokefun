@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace PokeFun.Model
@@ -10,6 +11,7 @@ namespace PokeFun.Model
         /// <summary>
         /// Name of the Pokemon
         /// </summary>
+        [Required]
         [JsonPropertyName("name")]
         public string Name { get; set; }
 
@@ -19,6 +21,7 @@ namespace PokeFun.Model
         /// <remarks>
         /// It may be in plain English or translated depending on the request
         /// </remarks>
+        [Required]
         [JsonPropertyName("description")]
         public string Description { get; set; }
 
