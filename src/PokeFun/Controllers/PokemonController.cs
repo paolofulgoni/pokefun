@@ -12,7 +12,7 @@ using PokeFun.PokeApi;
 namespace PokeFun.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("pokemon")]
     [Consumes(MediaTypeNames.Application.Json)]
     [Produces(MediaTypeNames.Application.Json)]
     public class PokemonController : ControllerBase
